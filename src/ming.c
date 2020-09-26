@@ -123,14 +123,17 @@ SWFMsgFunc Ming_setErrorFunction(SWFMsgFunc error)
 /*
  * set the version of SWF to produce on output
  * This function set the version of SWF to be produced by the library. Only
- * versions 4 through 8 inclusive are supported at this time.
+ * versions 4 through 10 inclusive are supported at this time.
  */
 void Ming_useSWFVersion(int version /* Flash version */)
 {
 	static int called=0;
 
-	if(version < 4 || version > 9)
-		SWF_error("Only SWF versions 4 to 9 are currently supported!\n");
+	if(version < 4 || version > 10)
+		SWF_error("Only SWF versions 4 to 10 are currently supported!\n");
+
+	if(version == 10) 
+		SWF_warn("NOTICE: SWF version 10 support is very limited atm.");
 
 	if ( called && version != SWF_versionNum )
 	{

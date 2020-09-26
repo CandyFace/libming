@@ -1487,6 +1487,7 @@ outputSWF_DEFINESHAPE4 (SWF_Parserstruct * pblock)
   outputSWF_RECT (&(sblock->EdgeBounds));
   _iprintf("   UsesNonScalingStrokes: %d\n", sblock->UsesNonScalingStrokes);
   _iprintf("   UsesScalingStrokes: %d\n", sblock->UsesScalingStrokes);
+  _iprintf("   UsesFillWindingRule: %d\n", sblock->UsesFillWindingRule);
   outputSWF_SHAPEWITHSTYLE (&(sblock->Shapes),2,"");
 }
 

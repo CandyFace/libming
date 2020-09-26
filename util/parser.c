@@ -2272,6 +2272,7 @@ parseSWF_DEFINESHAPE4 (FILE * f, int length)
   parserrec->Reserved = readBits(f, 6);
   parserrec->UsesNonScalingStrokes = readBits(f, 1);
   parserrec->UsesScalingStrokes = readBits(f, 1);
+  parserrec->UsesFillWindingRule = readBits(f, 1);
   parseSWF_SHAPEWITHSTYLE (f, &(parserrec->Shapes), 4);
 
   PAR_END;

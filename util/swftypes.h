@@ -1366,9 +1366,10 @@ struct SWF_DEFINESHAPE4
   UI16 ShapeID;
   SWF_RECT ShapeBounds;
   SWF_RECT EdgeBounds;
-  UI8 Reserved:6;
+  UI8 Reserved:5;
   UI8 UsesNonScalingStrokes:1;
   UI8 UsesScalingStrokes:1;
+  UI8 UsesFillWindingRule:1;
   SWF_SHAPEWITHSTYLE Shapes;
 };
 
